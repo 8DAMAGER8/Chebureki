@@ -29,7 +29,7 @@ export default {
     methods: {
         deleteCheburek(id) {
             this.editCheburekId = null
-            axios.post(`http://localhost:8000/api/delete/${id}`)
+            axios.post(`https://1c79-87-117-56-66.ngrok-free.app/api/delete/${id}`)
                 .then(res => {
                     this.$parent.getCheburek()
                 })

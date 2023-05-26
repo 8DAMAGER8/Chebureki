@@ -45,14 +45,14 @@ export default {
     },
     methods: {
         getCheburek (){
-            axios.get('http://localhost:8000/api/get')
+            axios.get('https://1c79-87-117-56-66.ngrok-free.app/api/get')
                 .then(response => this.cheburekList = response.data)
                 .catch((error) => {
                     console.error(error)
                 })
         },
         deleteCheburek(id) {
-            axios.post(`http://localhost:8000/api/delete/${id}`)
+            axios.post(`https://1c79-87-117-56-66.ngrok-free.app/api/delete/${id}`)
                 .then(res => {
                     this.getCheburek()
                 })

@@ -28,7 +28,7 @@ export default {
     methods: {
         updateCheburek(id) {
             this.$parent.editCheburekId = null
-            axios.post(`http://localhost:8000/api/update/${id}`, {name: this.name, price: this.price})
+            axios.post(`https://1c79-87-117-56-66.ngrok-free.app/api/update/${id}`, {name: this.name, price: this.price})
                 .then(res => {
                     this.$parent.getCheburek()
                 })

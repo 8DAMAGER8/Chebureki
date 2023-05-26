@@ -14,7 +14,7 @@ import { RouterLink, RouterView } from 'vue-router'
                         <RouterLink to="/about" class="btn btn-outline-success me-2" >Добавить чебурек</RouterLink>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <RouterLink to="/profit" class="btn btn-outline-success me-2" >Польза чебуреков</RouterLink>
                     </li>
                 </ul>
                 <span class="navbar-text">

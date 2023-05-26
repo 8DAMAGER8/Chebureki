@@ -33,7 +33,7 @@ export default {
 
     methods: {
         createCheburek() {
-            axios.post('http://localhost:8000/api/create',{
+            axios.post('https://1c79-87-117-56-66.ngrok-free.app/api/create',{
                 name: this.name,
                 price: this.price,
             }).then(res => {
