@@ -1,4 +1,3 @@
-
 <template>
     <h3 class="text-center mt-3">
         Список чебуреков
@@ -33,26 +32,41 @@ export default {
     data() {
         return {
             cheburekList: null,
-            editCheburekId:null,
+            editCheburekId: null,
             id: null,
             name: null,
-            price:null
+            price: null
         }
     },
 
-    mounted(){
+    mounted() {
         this.getCheburek()
     },
     methods: {
-        getCheburek (){
-            axios.get('https://1c79-87-117-56-66.ngrok-free.app/api/get')
-                .then(response => this.cheburekList = response.data)
+        getCheburek() {
+            axios.get(
+                'https://5e05-87-117-56-66.ngrok-free.app/api/get',
+                {
+                    headers: {
+                        'ngrok-skip-browser-warning': 'any'
+                    },
+                }
+            )
+                .then(response => {
+                    this.cheburekList = response.data
+                })
                 .catch((error) => {
                     console.error(error)
                 })
         },
         deleteCheburek(id) {
-            axios.post(`https://1c79-87-117-56-66.ngrok-free.app/api/delete/${id}`)
+            axios.post(
+                `https://5e05-87-117-56-66.ngrok-free.app/api/delete/${id}`,
+                {
+                    headers: {
+                        'ngrok-skip-browser-warning': 'any'
+                    }
+                })
                 .then(res => {
                     this.getCheburek()
                 })

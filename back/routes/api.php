@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/get', [CheburekiController::class, 'getAll']);
-Route::get('/get/{id}', [CheburekiController::class, 'getAll']);
-Route::post('/create', [CheburekiController::class, 'create']);
-Route::post('/update/{id}', [CheburekiController::class, 'update']);
-Route::post('/delete/{id}', [CheburekiController::class, 'delete']);
+Route::middleware([\App\Http\Middleware\OwnCors::class])->group(function () {
+    Route::get('/get', [CheburekiController::class, 'getAll']);
+    Route::get('/get/{id}', [CheburekiController::class, 'getAll']);
+    Route::post('/create', [CheburekiController::class, 'create']);
+    Route::post('/update/{id}', [CheburekiController::class, 'update']);
+    Route::post('/delete/{id}', [CheburekiController::class, 'delete']);
+});
+

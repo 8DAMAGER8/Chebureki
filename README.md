@@ -7,3 +7,5 @@
 - `docker compose run php artisan migrate`
 
 ### Deployment front-end
+- `npm i`
+- `npm run dev`

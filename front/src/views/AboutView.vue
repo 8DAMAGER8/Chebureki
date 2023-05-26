@@ -27,19 +27,24 @@ export default {
     data() {
         return {
             name: null,
-            price:null,
+            price: null,
         }
     },
 
     methods: {
         createCheburek() {
-            axios.post('https://1c79-87-117-56-66.ngrok-free.app/api/create',{
-                name: this.name,
-                price: this.price,
-            }).then(res => {
-                        this.name = null
-                        this.price = null
-                    })
+            axios.post('https://5e05-87-117-56-66.ngrok-free.app/api/create', {
+                    name: this.name,
+                    price: this.price,
+                },
+                {
+                    headers: {
+                        'ngrok-skip-browser-warning': 'any'
+                    }
+                }).then(res => {
+                this.name = null
+                this.price = null
+            })
                 .catch((error) => {
                     console.error(error)
                 })

@@ -12,7 +12,7 @@ export default {
     name: "EditComponent",
 
     props: [
-      'cheburek'
+        'cheburek'
     ],
 
     data() {
@@ -28,7 +28,15 @@ export default {
     methods: {
         updateCheburek(id) {
             this.$parent.editCheburekId = null
-            axios.post(`https://1c79-87-117-56-66.ngrok-free.app/api/update/${id}`, {name: this.name, price: this.price})
+            axios.post(`https://5e05-87-117-56-66.ngrok-free.app/api/update/${id}`, {
+                    name: this.name,
+                    price: this.price
+                },
+                {
+                    headers: {
+                        'ngrok-skip-browser-warning': 'any'
+                    }
+                })
                 .then(res => {
                     this.$parent.getCheburek()
                 })
