@@ -1,5 +1,8 @@
 
 <template>
+    <h3 class="text-center mt-3">
+        Список чебуреков
+    </h3>
     <div>
         <table class="table table-striped table-hover">
             <thead>

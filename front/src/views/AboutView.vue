@@ -1,6 +1,9 @@
 <template>
+    <h3 class="text-center mt-3">
+        Добавление чебурека
+    </h3>
     <form class="w-50 table">
-        <div class="mb-3">
+        <div class="mb-3 ">
             <label for="name" class="form-label">Вкус</label>
             <input type="text" class="form-control" v-model="name" placeholder="С какой начинкой">
         </div>

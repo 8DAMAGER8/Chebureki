@@ -1,40 +1,33 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 </script>
-
 <template>
-  <header>
-        <nav class="navbar nav justify-content-center" style="background-color: #e3f2fd;">
-            <form class="container-fluid justify-content-start">
-                <RouterLink to="/" class="btn btn-outline-success me-2" >Список чебуреков</RouterLink>
-                <RouterLink to="/about" class="btn btn-outline-success me-2" >Добавить чебурек</RouterLink>
-            </form>
-        </nav>
-  </header>
-
-  <RouterView />
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="navbar-brand" >Чебуречная</div>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <RouterLink to="/" class="btn btn-outline-success me-2" >Список чебуреков</RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink to="/about" class="btn btn-outline-success me-2" >Добавить чебурек</RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+        Кушайте на здоровье
+      </span>
+            </div>
+        </div>
+    </nav>
+ <div class="container">
+     <RouterView />
+ </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
 
-
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
