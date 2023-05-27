@@ -38,6 +38,9 @@ export default {
                 .then(res => {
                     this.$parent.getCheburek()
                 })
+                .catch((error) => {
+                    console.error(error)
+                })
         },
 
         changeEditCheburekId(id, name, price) {

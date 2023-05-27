@@ -71,6 +71,9 @@ export default {
                 .then(res => {
                     this.getCheburek()
                 })
+                .catch((error) => {
+                    console.error(error)
+                })
         },
         isEdit(id) {
             return this.editCheburekId === id
