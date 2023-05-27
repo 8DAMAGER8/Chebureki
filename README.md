@@ -11,4 +11,4 @@
 - `npm run dev`
 
 // ngrok http 8000 - добавить получившийся адресс в BACKAND_URL front/src/main.js
-// ssh -R 80:localhost:5173 nokey@localhost.run - выдаст не стабильную ссылку
+// ssh -R 80:localhost:5173 nokey@localhost.run - выдаст нестабильную ссылку
