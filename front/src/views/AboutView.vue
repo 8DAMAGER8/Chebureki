@@ -22,6 +22,7 @@
 </style>
 <script>
 import axios from "axios";
+import {BACKAND_URL} from "../main.js"
 
 export default {
     data() {
@@ -33,7 +34,7 @@ export default {
 
     methods: {
         createCheburek() {
-            axios.post('https://5e05-87-117-56-66.ngrok-free.app/api/create', {
+            axios.post(BACKAND_URL + `/api/create`, {
                     name: this.name,
                     price: this.price,
                 },

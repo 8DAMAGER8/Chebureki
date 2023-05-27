@@ -10,7 +10,7 @@
 </template>
 
 <script>
-
+import {BACKAND_URL} from "../main";
 export default {
     name: "ShowComponent",
 
@@ -29,7 +29,7 @@ export default {
     methods: {
         deleteCheburek(id) {
             this.editCheburekId = null
-            axios.post(`https://5e05-87-117-56-66.ngrok-free.app/api/delete/${id}`,
+            axios.post(BACKAND_URL + `/api/delete/${id}`,
                 {
                     headers: {
                         'ngrok-skip-browser-warning': 'any'

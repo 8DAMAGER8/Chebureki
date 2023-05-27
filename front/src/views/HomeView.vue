@@ -26,6 +26,7 @@
 <script>
 import ShowComponent from "../components/ShowComponent.vue";
 import EditComponent from "../components/EditComponent.vue";
+import {BACKAND_URL} from "../main.js"
 
 export default {
     components: {EditComponent, ShowComponent},
@@ -45,7 +46,7 @@ export default {
     methods: {
         getCheburek() {
             axios.get(
-                'https://5e05-87-117-56-66.ngrok-free.app/api/get',
+                BACKAND_URL + `/api/get`,
                 {
                     headers: {
                         'ngrok-skip-browser-warning': 'any'
@@ -61,7 +62,7 @@ export default {
         },
         deleteCheburek(id) {
             axios.post(
-                `https://5e05-87-117-56-66.ngrok-free.app/api/delete/${id}`,
+                BACKAND_URL + `/api/delete/${id}`,
                 {
                     headers: {
                         'ngrok-skip-browser-warning': 'any'

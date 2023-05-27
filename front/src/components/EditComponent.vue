@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import {BACKAND_URL} from "../main.js"
 export default {
     name: "EditComponent",
 
@@ -28,7 +29,7 @@ export default {
     methods: {
         updateCheburek(id) {
             this.$parent.editCheburekId = null
-            axios.post(`https://5e05-87-117-56-66.ngrok-free.app/api/update/${id}`, {
+            axios.post(BACKAND_URL + `/api/update/${id}`, {
                     name: this.name,
                     price: this.price
                 },
