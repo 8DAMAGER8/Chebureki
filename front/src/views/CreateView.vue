@@ -42,10 +42,7 @@ export default {
                     headers: {
                         'ngrok-skip-browser-warning': 'any'
                     }
-                }).then(res => {
-                this.name = null
-                this.price = null
-            })
+                }).then(this.$router.push('/'))
                 .catch((error) => {
                     console.error(error)
                 })
